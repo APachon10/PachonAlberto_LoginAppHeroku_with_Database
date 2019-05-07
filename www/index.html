@@ -44,11 +44,15 @@
 				<!-- Verificamos que los campos no esten vacios-->
 				if(usuario == "" && pass == ""){
 					alert("Usuario o Contraseña en Blanco ");
-				}else if(usuario ==  && pass == ){
+				}else{
+					<!-- Verificamos que los valores puestos en los inputs coincidan con algun registro de la base de Datos-->
 					
 				}
-				<!-- Verificamos que los valores puestos en los inputs coincidan con algun registro de la base de Datos-->
 				
+				
+				<!-- Borramos los Valores de los input al acabar la consulta -->
+				$("#usuario").val("");
+				$("#Pass").val("");
 			};
 			<!-- Llamamos a la Funcion -->
 			 $(document).ready( function ()  {
