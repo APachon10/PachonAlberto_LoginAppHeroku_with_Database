@@ -18,7 +18,6 @@
 			}
 			#label_user{
 				color:white;
-				
 			}
 			#label_password{
 				color:white;
@@ -46,10 +45,14 @@
 					alert("Usuario o Contraseña en Blanco ");
 				}else{
 					<!-- Verificamos que los valores puestos en los inputs coincidan con algun registro de la base de Datos-->
-					
+					 $.ajax({
+					   method: "GET",
+					   url: "https://floating-castle-10666.herokuapp.com/",
+					   dataType: "json",  
+					 }).done(function (login) {
+						
+					});
 				}
-				
-				
 				<!-- Borramos los Valores de los input al acabar la consulta -->
 				$("#usuario").val("");
 				$("#Pass").val("");
